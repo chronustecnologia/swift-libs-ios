@@ -1,0 +1,39 @@
+name: SwiftLibs
+options:
+  bundleIdPrefix: com.chronustecnologia
+  deploymentTarget:
+    iOS: '15.0'
+  createIntermediateGroups: true
+
+configs:
+  Debug:
+    settings:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+    buildSettings:
+      SWIFT_OPTIMIZATION_LEVEL: '-Onone'
+      EMBEDDED_CONTENT_CONTAINS_SWIFT: NO
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: NO
+  Release:
+    settings:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: RELEASE
+    buildSettings:
+      SWIFT_OPTIMIZATION_LEVEL: '-O'
+      EMBEDDED_CONTENT_CONTAINS_SWIFT: NO
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: NO
+
+settings:
+  SWIFT_VERSION: 5.0
+  ENABLE_BITCODE: NO
+
+targets:
+  SwiftLibs:
+    type: application
+    platform: iOS
+    bundleId: com.chronustecnologia.SwiftLibs
+    info: { "path": "SwiftLibs/Info.plist" }
+    sources: 
+      - path: SwiftLibs
+    settings:
+      TARGETED_DEVICE_FAMILY: "1,2"
+      VALIDATE_WORKSPACE: yes
+      ENABLE_USER_SCRIPT_SANDBOXING: no
