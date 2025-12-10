@@ -19,8 +19,9 @@
 		DCDD63F82EE9C8790065D152 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F32EE9C8790065D152 /* CadastroViewController.swift */; };
 		DCDD63F92EE9C8790065D152 /* CadastroInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63EF2EE9C8790065D152 /* CadastroInteractor.swift */; };
 		DCDD63FA2EE9C8790065D152 /* CadastroModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F02EE9C8790065D152 /* CadastroModels.swift */; };
-		DCDD63FD2EE9EDD10065D152 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63FC2EE9EDCF0065D152 /* Enviroment.swift */; };
 		DCDD63FF2EE9EE250065D152 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63FE2EE9EE230065D152 /* AppVersion.swift */; };
+		DCDD64222EEA08640065D152 /* BaseNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */; };
+		DCDD64242EEA08A80065D152 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD64232EEA08A50065D152 /* DefaultRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		DCDD63F22EE9C8790065D152 /* CadastroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRouter.swift; sourceTree = "<group>"; };
 		DCDD63F32EE9C8790065D152 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		DCDD63F42EE9C8790065D152 /* CadastroWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorker.swift; sourceTree = "<group>"; };
-		DCDD63FC2EE9EDCF0065D152 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		DCDD63FE2EE9EE230065D152 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkRequest.swift; sourceTree = "<group>"; };
+		DCDD64232EEA08A50065D152 /* DefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRequest.swift; sourceTree = "<group>"; };
 		E3EF7BDE84965B095B888889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E707022E7AB8730F1B2BFD14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +132,9 @@
 		DCDD63FB2EE9EDC90065D152 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				DCDD64232EEA08A50065D152 /* DefaultRequest.swift */,
+				DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */,
 				DCDD63FE2EE9EE230065D152 /* AppVersion.swift */,
-				DCDD63FC2EE9EDCF0065D152 /* Enviroment.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -245,13 +248,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDD63F52EE9C8790065D152 /* CadastroPresenter.swift in Sources */,
+				DCDD64222EEA08640065D152 /* BaseNetworkRequest.swift in Sources */,
 				DCDD63F62EE9C8790065D152 /* CadastroRouter.swift in Sources */,
-				DCDD63FD2EE9EDD10065D152 /* Enviroment.swift in Sources */,
 				DCDD63F72EE9C8790065D152 /* CadastroWorker.swift in Sources */,
 				DCDD63F82EE9C8790065D152 /* CadastroViewController.swift in Sources */,
 				DCDD63F92EE9C8790065D152 /* CadastroInteractor.swift in Sources */,
 				DCDD63FA2EE9C8790065D152 /* CadastroModels.swift in Sources */,
 				6D5D8881A034DA30DA8F6CE8 /* AppDelegate.swift in Sources */,
+				DCDD64242EEA08A80065D152 /* DefaultRequest.swift in Sources */,
 				D874CC15DDAD6CAB4588853C /* SceneDelegate.swift in Sources */,
 				B579835C0FC041C385DC4384 /* ViewController.swift in Sources */,
 				DCDD63FF2EE9EE250065D152 /* AppVersion.swift in Sources */,

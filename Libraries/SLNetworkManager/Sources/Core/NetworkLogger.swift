@@ -25,7 +25,7 @@ public class DefaultNetworkLogger: NetworkLogger {
         print("URL: \(request.url?.absoluteString ?? "N/A")")
         print("Method: \(request.httpMethod ?? "N/A")")
         print("Headers: \(request.allHTTPHeaderFields ?? [:])")
-        
+        print("================================")
         if let body = request.httpBody,
            let bodyString = String(data: body, encoding: .utf8) {
             print("Body: \(bodyString)")
@@ -42,6 +42,8 @@ public class DefaultNetworkLogger: NetworkLogger {
             print("Status Code: \(httpResponse.statusCode)")
             print("Headers: \(httpResponse.allHeaderFields)")
         }
+        
+        print("================================")
         
         if let data = data,
            let jsonString = String(data: data, encoding: .utf8) {

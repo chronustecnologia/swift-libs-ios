@@ -1,11 +1,9 @@
 //
 //  Enviroment.swift
-//  SwiftLibs
+//  Pods
 //
 //  Created by Jose Julio Junior on 10/12/25.
 //
-
-import SLNetworkManager
 
 public enum Environment {
     case development
@@ -13,7 +11,7 @@ public enum Environment {
     case production
     
     /// Retorna o ambiente atual baseado em configurações
-    static var current: Environment {
+    public static var current: Environment {
         #if DEBUG
         return .development
         #elseif STAGING
@@ -23,7 +21,7 @@ public enum Environment {
         #endif
     }
     
-    var baseURL: String {
+    public var baseURL: String {
         switch self {
         case .development:
             return "https://my-json-server.typicode.com"
@@ -34,7 +32,7 @@ public enum Environment {
         }
     }
     
-    var isLoggingEnabled: Bool {
+    public var isLoggingEnabled: Bool {
         switch self {
         case .development, .staging:
             return true
@@ -43,7 +41,7 @@ public enum Environment {
         }
     }
     
-    var certificateValidation: CertificateValidation {
+    public var certificateValidation: CertificateValidation {
         switch self {
         case .development:
             // Em desenvolvimento, aceitar certificados auto-assinados

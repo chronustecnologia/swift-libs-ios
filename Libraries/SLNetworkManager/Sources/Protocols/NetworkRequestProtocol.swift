@@ -12,7 +12,7 @@ public protocol NetworkRequestProtocol {
     
     var method: HTTPMethod { get }
     
-    var parameters: [String: Any]? { get }
+    var body: [String: Any]? { get }
     
     var headers: [String: String]? { get }
     
@@ -24,11 +24,16 @@ public protocol NetworkRequestProtocol {
 }
 
 public extension NetworkRequestProtocol {
+    var body: [String: Any]? { nil }
+    var headers: [String: String]? { nil }
+    var contentType: ContentType { .json }
+    var authentication: AuthenticationType { .none }
+    
     func asNetworkRequest() -> NetworkRequest {
         return NetworkRequest(
             endpoint: endpoint,
             method: method,
-            parameters: parameters,
+            body: body,
             headers: headers,
             contentType: contentType,
             authentication: authentication

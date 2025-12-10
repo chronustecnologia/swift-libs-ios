@@ -44,13 +44,13 @@ final class RequestBuilder {
         }
         
         // Adicionar body se necessário
-        if let parameters = request.parameters, request.method != .get {
+        if let parameters = request.body, request.method != .get {
             do {
                 urlRequest.httpBody = try encodeParameters(parameters, contentType: request.contentType)
             } catch {
                 throw NetworkError.encodingError(error)
             }
-        } else if let parameters = request.parameters, request.method == .get {
+        } else if let parameters = request.body, request.method == .get {
             // Para GET, adicionar parâmetros na query string
             urlRequest.url = try addQueryParameters(to: url, parameters: parameters)
         }

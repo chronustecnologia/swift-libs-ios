@@ -75,6 +75,23 @@ class ViewController: UIViewController {
     @objc func notificationTeste(_ notification: Notification) {
         guard let notificationResponse = notification.userInfo?["response"] as? String else { return }
         
+        //networkManagerWithRequest() { result in }
+        
+        networkManagerWithRequestProtocol() { result in }
+        
+        requestAuthorizationLocation(notificationResponse)
+    }
+    
+    @objc func didTap() {
+        notification.post(name: .loadingWindow, object: self, userInfo: ["response": "Novo título botão"])
+    }
+    
+    private func networkManagerWithRequestProtocol(completion: @escaping (Result<NetworkResponse<Retorno>, NetworkError>) -> Void) {
+        let request = DefaultRequest()
+        NetworkManager.shared?.request(request, responseType: Retorno.self, completion: completion)
+    }
+    
+    private func networkManagerWithRequest(completion: @escaping (Result<Retorno, NetworkError>) -> Void) {
         let request = NetworkRequest(
             endpoint: "/typicode/demo/profile",
             method: .get
@@ -83,18 +100,11 @@ class ViewController: UIViewController {
         NetworkManager.shared?.request(request, responseType: Retorno.self) { result in
             switch result {
             case .success(let response):
-                break
-                //completion(.success(response.data))
+                completion(.success(response.data))
             case .failure(let error):
-                break
-                //completion(.failure(error))
+                completion(.failure(error))
             }
         }
-        requestAuthorizationLocation(notificationResponse)
-    }
-    
-    @objc func didTap() {
-        notification.post(name: .loadingWindow, object: self, userInfo: ["response": "Novo título botão"])
     }
     
     private func requestAuthorizationLocation(_ title: String) {

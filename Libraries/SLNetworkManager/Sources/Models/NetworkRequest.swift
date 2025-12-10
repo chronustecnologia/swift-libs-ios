@@ -8,7 +8,7 @@
 public struct NetworkRequest {
     let endpoint: String
     let method: HTTPMethod
-    let parameters: [String: Any]?
+    let body: [String: Any]?
     let headers: [String: String]?
     let contentType: ContentType
     let authentication: AuthenticationType
@@ -16,14 +16,14 @@ public struct NetworkRequest {
     public init(
         endpoint: String,
         method: HTTPMethod,
-        parameters: [String: Any]? = nil,
+        body: [String: Any]? = nil,
         headers: [String: String]? = nil,
         contentType: ContentType = .json,
         authentication: AuthenticationType = .none
     ) {
         self.endpoint = endpoint
         self.method = method
-        self.parameters = parameters
+        self.body = body
         self.headers = headers
         self.contentType = contentType
         self.authentication = authentication

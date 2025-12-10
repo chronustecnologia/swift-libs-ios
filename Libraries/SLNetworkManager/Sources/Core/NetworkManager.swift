@@ -24,41 +24,48 @@ public final class NetworkManager: NSObject {
     let configuration: NetworkConfiguration
     private let requestBuilder: RequestBuilder
     private let logger: NetworkLogger?
+    private let mockUtils: MockUtilsLogic
+    
+    private var debugMode: Bool = Environment.current == .development
     
     // MARK: - Singleton (Opcional)
     
     public static private(set) var shared: NetworkManager?
     
-    public static func configure(with configuration: NetworkConfiguration, logger: NetworkLogger? = DefaultNetworkLogger()) {
+    public static func configure(with configuration: NetworkConfiguration,
+                                 logger: NetworkLogger? = DefaultNetworkLogger(),
+                                 mockConfig: MockConfigurationProtocol) {
         guard shared == nil else {
             print("⚠️ NetworkManager já foi configurado. Ignorando nova configuração.")
             return
         }
-        shared = NetworkManager(configuration: configuration, logger: logger)
+        shared = NetworkManager(configuration: configuration, logger: logger, mockConfig: mockConfig)
     }
     
-    public static func reconfigure(with configuration: NetworkConfiguration, logger: NetworkLogger? = nil) {
-        shared = NetworkManager(configuration: configuration, logger: logger)
+    public static func reconfigure(with configuration: NetworkConfiguration,
+                                   logger: NetworkLogger? = nil,
+                                   mockConfig: MockConfigurationProtocol) {
+            shared = NetworkManager(configuration: configuration, logger: logger, mockConfig: mockConfig)
     }
     
     // MARK: - Initialization
     
-    public init(configuration: NetworkConfiguration, logger: NetworkLogger? = nil) {
+    public init(configuration: NetworkConfiguration,
+                logger: NetworkLogger? = nil,
+                mockConfig: MockConfigurationProtocol,
+                mockUtils: MockUtilsLogic = MockUtils()) {
         self.configuration = configuration
         self.requestBuilder = RequestBuilder(configuration: configuration)
         self.logger = logger
+        self.mockUtils = mockUtils
+        mockUtils.configMockService(with: mockConfig)
         super.init()
     }
     
     // MARK: - Public Methods
     
     /// Executa uma requisição e retorna dados decodificados
-    public func request<T: Decodable>(
-        _ request: NetworkRequest,
-        responseType: T.Type,
-        decoder: JSONDecoder = JSONDecoder(),
-        completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void
-    ) {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) {
         executeRequest(request) { [weak self] result in
             switch result {
             case .success(let response):
@@ -81,18 +88,12 @@ public final class NetworkManager: NSObject {
     }
     
     /// Executa uma requisição e retorna dados brutos
-    public func request(
-        _ request: NetworkRequest,
-        completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void
-    ) {
+    public func request(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
         executeRequest(request, completion: completion)
     }
     
     /// Executa uma requisição sem retorno de dados (ex: DELETE)
-    public func request(
-        _ request: NetworkRequest,
-        completion: @escaping (Result<Void, NetworkError>) -> Void
-    ) {
+    public func request(_ request: NetworkRequest,completion: @escaping (Result<Void, NetworkError>) -> Void) {
         executeRequest(request) { result in
             switch result {
             case .success:
@@ -106,11 +107,7 @@ public final class NetworkManager: NSObject {
     // MARK: - Async/Await Support (iOS 13+)
     
     @available(iOS 13.0.0, *)
-    public func request<T: Decodable>(
-        _ request: NetworkRequest,
-        responseType: T.Type,
-        decoder: JSONDecoder = JSONDecoder()
-    ) async throws -> NetworkResponse<T> {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder()) async throws -> NetworkResponse<T> {
         return try await withCheckedThrowingContinuation { continuation in
             self.request(request, responseType: responseType, decoder: decoder) { result in
                 continuation.resume(with: result)
@@ -129,9 +126,7 @@ public final class NetworkManager: NSObject {
     
     // MARK: - Private Methods
     
-    private func executeRequest(
-        _ request: NetworkRequest,
-        completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void
+    private func executeRequest(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void
     ) {
         let urlRequest: URLRequest
         
@@ -187,6 +182,15 @@ public final class NetworkManager: NSObject {
         }
         
         task.resume()
+    }
+    
+    private func continueWithoutMock<T: Codable, E: Codable>() {
+        
+    }
+    
+    func checkExistantMock<T: Codable, E: Codable>(request: NetworkRequestProtocol, model: T.Type, customError: E.Type) -> MockResponse<T, E>? {
+        guard let data = mockUtils.checkExistantMock(request: request) else { return nil }
+        return jsonUtils.convertMock(jsonData: data, to: model, customError: customError)
     }
 }
 
