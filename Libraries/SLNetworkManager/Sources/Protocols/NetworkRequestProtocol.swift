@@ -9,17 +9,11 @@ import Foundation
 
 public protocol NetworkRequestProtocol {
     var endpoint: String { get }
-    
     var method: HTTPMethod { get }
-    
     var body: [String: Any]? { get }
-    
     var headers: [String: String]? { get }
-    
     var contentType: ContentType { get }
-    
     var authentication: AuthenticationType { get }
-    
     func asNetworkRequest() -> NetworkRequest
 }
 

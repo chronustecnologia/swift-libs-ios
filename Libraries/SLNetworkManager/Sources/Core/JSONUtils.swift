@@ -8,21 +8,25 @@
 import Foundation
 import SLCommonExtensions
 
-protocol JSONUtilsLogic {
+public protocol JSONUtilsLogic {
     func convertMock<E: Codable>(jsonData: Data, customError: E.Type?) -> MockErrorResponse<E>?
     func convertMock<T: Codable, E: Codable>(jsonData: Data, to model: T.Type, customError: E.Type) -> MockResponse<T, E>?
 }
 
-final class JSONUtils: JSONUtilsLogic {
+public final class JSONUtils: JSONUtilsLogic {
     
-    func convertMock<T: Codable, E: Codable>(jsonData: Data, to model: T.Type, customError: E.Type) -> MockResponse<T, E>? {
+    public init() {
+        
+    }
+    
+    public func convertMock<T: Codable, E: Codable>(jsonData: Data, to model: T.Type, customError: E.Type) -> MockResponse<T, E>? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = dateDecodingStrategy
         let result = try? decoder.decode(MockResponse<T, E>.self, from: jsonData)
         return result
     }
     
-    func convertMock<E: Codable>(jsonData: Data, customError: E.Type?) -> MockErrorResponse<E>? {
+    public func convertMock<E: Codable>(jsonData: Data, customError: E.Type?) -> MockErrorResponse<E>? {
         let decoder = JSONDecoder()
         let result = try? decoder.decode(MockErrorResponse<E>.self, from: jsonData)
         return result

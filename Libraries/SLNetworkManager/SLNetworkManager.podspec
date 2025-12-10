@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Release' do |release|
         release.source_files = "Sources/**/*.swift"
+        release.dependency 'SLCommonExtensions'
         release.frameworks = 'UIKit'
     end
 end

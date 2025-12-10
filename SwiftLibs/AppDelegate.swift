@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         let logger = DefaultNetworkLogger(isEnabled: Environment.current.isLoggingEnabled)
-        NetworkManager.configure(with: configuration, logger: logger)
+        NetworkManager.configure(with: configuration, logger: logger, mockConfig: MocksConfiguration())
         
         print("✅ NetworkManager configurado")
         print("📍 Base URL: \(Environment.current.baseURL)")

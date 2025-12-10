@@ -7,20 +7,19 @@
 
 public extension NetworkManager {
     
-    func request<T: Decodable>(
+    func request<T: Codable>(
         _ requestObject: NetworkRequestProtocol,
         responseType: T.Type,
         decoder: JSONDecoder = JSONDecoder(),
-        completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void
-    ) {
+        completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) {
+        guard continueWithoutMock(model: responseType, request: requestObject, customError: EmptyErrorModel.self, completion: completion) else { return }
         let networkRequest = requestObject.asNetworkRequest()
         self.request(networkRequest, responseType: responseType, decoder: decoder, completion: completion)
     }
     
     func request(
         _ requestObject: NetworkRequestProtocol,
-        completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void
-    ) {
+        completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
         let networkRequest = requestObject.asNetworkRequest()
         self.request(networkRequest, completion: completion)
     }

@@ -25,6 +25,7 @@ public final class NetworkManager: NSObject {
     private let requestBuilder: RequestBuilder
     private let logger: NetworkLogger?
     private let mockUtils: MockUtilsLogic
+    private let jsonUtils: JSONUtilsLogic
     
     private var debugMode: Bool = Environment.current == .development
     
@@ -53,11 +54,13 @@ public final class NetworkManager: NSObject {
     public init(configuration: NetworkConfiguration,
                 logger: NetworkLogger? = nil,
                 mockConfig: MockConfigurationProtocol,
-                mockUtils: MockUtilsLogic = MockUtils()) {
+                mockUtils: MockUtilsLogic = MockUtils(),
+                jsonUtils: JSONUtilsLogic = JSONUtils()) {
         self.configuration = configuration
         self.requestBuilder = RequestBuilder(configuration: configuration)
         self.logger = logger
         self.mockUtils = mockUtils
+        self.jsonUtils = jsonUtils
         mockUtils.configMockService(with: mockConfig)
         super.init()
     }
@@ -126,8 +129,7 @@ public final class NetworkManager: NSObject {
     
     // MARK: - Private Methods
     
-    private func executeRequest(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void
-    ) {
+    private func executeRequest(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
         let urlRequest: URLRequest
         
         do {
@@ -184,11 +186,20 @@ public final class NetworkManager: NSObject {
         task.resume()
     }
     
-    private func continueWithoutMock<T: Codable, E: Codable>() {
-        
+    func continueWithoutMock<T: Codable, E: Codable>(model: T.Type, request: NetworkRequestProtocol, customError: E.Type, completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) -> Bool {
+        guard debugMode,
+              let response = checkExistantMock(request: request, model: model, customError: customError) else { return true }
+        //if response.httpStatus.isHTTPSuccess, let successResponse = response.results {
+        //    completion(.success(successResponse))
+        //} else if let errorResponse = response.errorResults {
+        //    completion(.failure(.customError(statusCode: response.httpStatus, result: errorResponse)))
+        //} else {
+        //    completion(.failure(.mappingError))
+        //}
+        return false
     }
     
-    func checkExistantMock<T: Codable, E: Codable>(request: NetworkRequestProtocol, model: T.Type, customError: E.Type) -> MockResponse<T, E>? {
+    private func checkExistantMock<T: Codable, E: Codable>(request: NetworkRequestProtocol, model: T.Type, customError: E.Type) -> MockResponse<T, E>? {
         guard let data = mockUtils.checkExistantMock(request: request) else { return nil }
         return jsonUtils.convertMock(jsonData: data, to: model, customError: customError)
     }

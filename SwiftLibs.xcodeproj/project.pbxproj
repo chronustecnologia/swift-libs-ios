@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,10 @@
 		F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DCDD64312EEA1AB00065D152 /* Mocks */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Mocks; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		C0E76F8AB4D6FEB6636412CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -61,6 +65,7 @@
 		31B654D8509FCACC0AAFD5FA /* SwiftLibs */ = {
 			isa = PBXGroup;
 			children = (
+				DCDD64312EEA1AB00065D152 /* Mocks */,
 				DCDD63FB2EE9EDC90065D152 /* Global */,
 				DCDD63ED2EE9C84D0065D152 /* Modules */,
 				F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */,
@@ -155,6 +160,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DCDD64312EEA1AB00065D152 /* Mocks */,
 			);
 			name = SwiftLibs;
 			productName = SwiftLibs;
