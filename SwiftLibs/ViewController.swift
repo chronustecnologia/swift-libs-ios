@@ -17,6 +17,11 @@ import SLStorage
 import SLStorageInterface
 import DSKit
 import SLCommonImages
+import SLNetworkManager
+
+struct Retorno: Codable {
+    let name: String?
+}
 
 class ViewController: UIViewController {
 
@@ -34,7 +39,6 @@ class ViewController: UIViewController {
     lazy var image: UIImageView = {
         let image = UIImageView(image: SLImage.fromImage(.image))
         image.contentMode = .scaleAspectFit
-        //image.backgroundColor = .red
         return image
     }()
     
@@ -71,6 +75,21 @@ class ViewController: UIViewController {
     @objc func notificationTeste(_ notification: Notification) {
         guard let notificationResponse = notification.userInfo?["response"] as? String else { return }
         
+        let request = NetworkRequest(
+            endpoint: "/typicode/demo/profile",
+            method: .get
+        )
+        
+        NetworkManager.shared?.request(request, responseType: Retorno.self) { result in
+            switch result {
+            case .success(let response):
+                break
+                //completion(.success(response.data))
+            case .failure(let error):
+                break
+                //completion(.failure(error))
+            }
+        }
         requestAuthorizationLocation(notificationResponse)
     }
     

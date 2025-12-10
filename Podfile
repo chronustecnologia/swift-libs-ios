@@ -16,6 +16,7 @@ def shared_pods
   pod 'SLStorageInterface', :path => './Libraries/SLStorageInterface'
   pod 'SLStorage', :path => './Libraries/SLStorage'
   pod 'SLCommonImages', :path => './Libraries/SLCommonImages'
+  pod 'SLNetworkManager', :path => './Libraries/SLNetworkManager'
   pod 'DSKit', :path => './Libraries/DSKit'
 end
 
