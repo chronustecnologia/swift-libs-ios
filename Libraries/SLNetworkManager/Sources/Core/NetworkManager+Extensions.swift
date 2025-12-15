@@ -5,16 +5,17 @@
 //  Created by Jose Julio on 09/12/25.
 //
 
+import SLNetworkManagerInterface
+
 public extension NetworkManager {
     
     func request<T: Codable>(
         _ requestObject: NetworkRequestProtocol,
         responseType: T.Type,
-        decoder: JSONDecoder = JSONDecoder(),
         completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard continueWithoutMock(model: responseType, request: requestObject, customError: EmptyErrorModel.self, completion: completion) else { return }
         let networkRequest = requestObject.asNetworkRequest()
-        self.request(networkRequest, responseType: responseType, decoder: decoder, completion: completion)
+        self.request(networkRequest, responseType: responseType, completion: completion)
     }
     
     func request(
@@ -37,11 +38,10 @@ public extension NetworkManager {
     @available(iOS 13.0.0, *)
     func request<T: Decodable>(
         _ requestObject: NetworkRequestProtocol,
-        responseType: T.Type,
-        decoder: JSONDecoder = JSONDecoder()
+        responseType: T.Type
     ) async throws -> T {
         let networkRequest = requestObject.asNetworkRequest()
-        return try await self.request(networkRequest, responseType: responseType, decoder: decoder)
+        return try await self.request(networkRequest, responseType: responseType)
     }
     
     @available(iOS 13.0.0, *)

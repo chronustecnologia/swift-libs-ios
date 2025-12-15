@@ -7,6 +7,7 @@
 
 import Foundation
 import SLNetworkManager
+import SLNetworkManagerInterface
 
 final class MocksConfiguration: MockConfigurationProtocol {
     var mocksPath: String { "/Users/jose.julio.ext/SwiftProjects/swift-libs-ios/SwiftLibs/Mocks/" }

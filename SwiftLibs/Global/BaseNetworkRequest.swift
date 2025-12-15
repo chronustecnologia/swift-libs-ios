@@ -6,6 +6,7 @@
 //
 
 import SLNetworkManager
+import SLNetworkManagerInterface
 
 open class BaseNetworkRequest: NetworkRequestProtocol {
     

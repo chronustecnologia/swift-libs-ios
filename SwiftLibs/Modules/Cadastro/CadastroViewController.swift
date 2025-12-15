@@ -9,14 +9,18 @@ import UIKit
 
 protocol CadastroDisplayLogic: AnyObject {
     func displayScreenValues(viewModel: Cadastro.Model.ViewModel)
+    func displaySuccess(viewModel: Cadastro.Model.SuccessViewModel)
+    func displayError()
 }
 
-final class CadastroViewController: UIViewController, CadastroDisplayLogic {
+final class CadastroViewController: UIViewController {
     
     // MARK: - Archtecture Objects
     
     var interactor: CadastroBusinessLogic?
     var router: (NSObjectProtocol & CadastroRoutingLogic & CadastroDataPassing)?
+    
+    var screenView = CadastroView()
     
     // MARK: - ViewController Lifecycle
     
@@ -30,10 +34,12 @@ final class CadastroViewController: UIViewController, CadastroDisplayLogic {
         setup()
     }
     
+    override func loadView() {
+        view = screenView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addComponents()
-        addComponentsConstraints()
         loadScreenValues()
     }
     
@@ -51,6 +57,7 @@ final class CadastroViewController: UIViewController, CadastroDisplayLogic {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        screenView.delegate = viewController
     }
     
     // MARK: - Private Functions
@@ -58,16 +65,26 @@ final class CadastroViewController: UIViewController, CadastroDisplayLogic {
     private func loadScreenValues() {
         interactor?.loadScreenValues()
     }
+}
+
+extension CadastroViewController: CadastroDelegate {
     
-    // MARK: - Layout Functions
-    
-    private func addComponents() {}
-    
-    private func addComponentsConstraints() {}
-    
-    // MARK: - Display Logic
-    
+    func didTap() {
+        interactor?.load()
+    }
+}
+
+extension CadastroViewController: CadastroDisplayLogic {
+
     func displayScreenValues(viewModel: Cadastro.Model.ViewModel) {
-        //nameTextField.text = viewModel.name
+        screenView.setup(model: viewModel.model)
+    }
+    
+    func displaySuccess(viewModel: Cadastro.Model.SuccessViewModel) {
+        print (viewModel.text)
+    }
+    
+    func displayError() {
+        print ("Erro")
     }
 }

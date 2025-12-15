@@ -17,6 +17,7 @@ import SLStorage
 import SLStorageInterface
 import DSKit
 import SLCommonImages
+import SLNetworkManagerInterface
 import SLNetworkManager
 
 struct Retorno: Codable {
@@ -77,14 +78,7 @@ class ViewController: UIViewController {
         
         //networkManagerWithRequest() { result in }
         
-        networkManagerWithRequestProtocol() { result in
-            switch result {
-            case .success(let response):
-                break
-            case .failure(let error):
-                break
-            }
-        }
+        networkManagerWithRequestProtocol() { result in }
         
         requestAuthorizationLocation(notificationResponse)
     }

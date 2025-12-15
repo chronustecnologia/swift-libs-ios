@@ -6,13 +6,15 @@
 //
 
 import UIKit
+import SLNetworkManagerInterface
 
 protocol CadastroBusinessLogic {
     func loadScreenValues()
+    func load()
 }
 
 protocol CadastroDataStore {
-    // var name: String { get set }
+    var name: String { get set }
 }
 
 final class CadastroInteractor: CadastroBusinessLogic, CadastroDataStore {
@@ -24,7 +26,7 @@ final class CadastroInteractor: CadastroBusinessLogic, CadastroDataStore {
     
     // MARK: - DataStore Objects
     
-    // var name: String = ""
+    var name: String = ""
     
     // MARK: - Interactor Lifecycle
     
@@ -36,5 +38,27 @@ final class CadastroInteractor: CadastroBusinessLogic, CadastroDataStore {
     
     func loadScreenValues() {
         presenter?.presentScreenValues()
+    }
+    
+    func load() {
+        let request = CadastroRequest(request: Cadastro.Model.Request(name: name, success: true))
+        worker.fetch(request: request) { result in
+            switch result {
+            case .success(let response):
+                self.handleSuccess(response)
+            case .failure(let error):
+                self.handleError(error)
+            }
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func handleSuccess(_ response: Cadastro.Model.Response) {
+        presenter?.presentSuccess(response: response)
+    }
+    
+    private func handleError(_ error: NetworkError) {
+        presenter?.presentError()
     }
 }

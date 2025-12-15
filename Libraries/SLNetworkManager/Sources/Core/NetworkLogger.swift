@@ -39,6 +39,7 @@ public class DefaultNetworkLogger: NetworkLogger {
         print("📡 ========== RESPONSE ==========")
         
         if let httpResponse = response as? HTTPURLResponse {
+            print("URL: \(httpResponse.url?.absoluteString ?? "")")
             print("Status Code: \(httpResponse.statusCode)")
             print("Headers: \(httpResponse.allHeaderFields)")
         }

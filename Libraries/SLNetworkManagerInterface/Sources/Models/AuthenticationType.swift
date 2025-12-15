@@ -12,7 +12,7 @@ public enum AuthenticationType {
     case basic(username: String, password: String)
     case bearer(token: String)
     
-    var headerValue: String? {
+    public var headerValue: String? {
         switch self {
         case .none:
             return nil

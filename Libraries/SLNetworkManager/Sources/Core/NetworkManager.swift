@@ -5,7 +5,9 @@
 //  Created by Jose Julio on 09/12/25.
 //
 
-public final class NetworkManager: NSObject {
+import SLNetworkManagerInterface
+
+public final class NetworkManager: NSObject, NetworkManagerProtocol {
     
     // MARK: - Properties
     
@@ -31,7 +33,7 @@ public final class NetworkManager: NSObject {
     
     // MARK: - Singleton (Opcional)
     
-    public static private(set) var shared: NetworkManager?
+    public static private(set) var shared: NetworkManagerProtocol?
     
     public static func configure(with configuration: NetworkConfiguration,
                                  logger: NetworkLogger? = DefaultNetworkLogger(),
@@ -68,11 +70,12 @@ public final class NetworkManager: NSObject {
     // MARK: - Public Methods
     
     /// Executa uma requisição e retorna dados decodificados
-    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         executeRequest(request) { [weak self] result in
             switch result {
             case .success(let response):
                 do {
+                    let decoder = JSONDecoder()
                     let decodedData = try decoder.decode(T.self, from: response)
                     completion(.success(decodedData))
                 } catch {
@@ -105,9 +108,9 @@ public final class NetworkManager: NSObject {
     // MARK: - Async/Await Support (iOS 13+)
     
     @available(iOS 13.0.0, *)
-    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder()) async throws -> T {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type) async throws -> T {
         return try await withCheckedThrowingContinuation { continuation in
-            self.request(request, responseType: responseType, decoder: decoder) { result in
+            self.request(request, responseType: responseType) { result in
                 continuation.resume(with: result)
             }
         }

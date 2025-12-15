@@ -5,6 +5,8 @@
 //  Created by Jose Julio on 09/12/25.
 //
 
+import SLNetworkManagerInterface
+
 final class RequestBuilder {
     
     private let configuration: NetworkConfiguration

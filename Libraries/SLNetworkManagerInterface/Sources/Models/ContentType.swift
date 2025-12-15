@@ -12,7 +12,7 @@ public enum ContentType: String {
     case formUrlEncoded = "application/x-www-form-urlencoded"
     case multipartFormData = "multipart/form-data"
     
-    var headerValue: String {
+    public var headerValue: String {
         return self.rawValue
     }
 }

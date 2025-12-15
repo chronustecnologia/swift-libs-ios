@@ -6,6 +6,7 @@
 //
 
 import SLNetworkManager
+import SLNetworkManagerInterface
 
 final class DefaultRequest: NetworkRequestProtocol {
     var endpoint: String { "/typicode/demo/profile" }

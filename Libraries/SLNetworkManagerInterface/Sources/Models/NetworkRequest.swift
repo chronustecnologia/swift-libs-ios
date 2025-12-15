@@ -6,12 +6,12 @@
 //
 
 public struct NetworkRequest {
-    let endpoint: String
-    let method: HTTPMethod
-    let body: [String: Any]?
-    let headers: [String: String]?
-    let contentType: ContentType
-    let authentication: AuthenticationType
+    public let endpoint: String
+    public let method: HTTPMethod
+    public let body: [String: Any]?
+    public let headers: [String: String]?
+    public let contentType: ContentType
+    public let authentication: AuthenticationType
     
     public init(
         endpoint: String,

@@ -9,8 +9,18 @@ import UIKit
 
 enum Cadastro {
     enum Model {
-        struct Request {}
-        struct Response {}
-        struct ViewModel {}
+        struct Request: Codable {
+            let name: String
+            let success: Bool
+        }
+        struct Response: Codable {
+            let name: String?
+        }
+        struct ViewModel {
+            let model: CadastroModel
+        }
+        struct SuccessViewModel {
+            let text: String
+        }
     }
 }

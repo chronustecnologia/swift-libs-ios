@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let viewController = ViewController()
+        let viewController = CadastroViewController()
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SLNetworkManagerInterface
 
 public protocol MockUtilsLogic {
     func configMockService(with config: MockConfigurationProtocol)
