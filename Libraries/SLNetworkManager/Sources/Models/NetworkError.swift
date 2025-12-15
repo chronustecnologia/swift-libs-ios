@@ -12,10 +12,11 @@ public enum NetworkError: Error, LocalizedError {
     case noData
     case decodingError(Error)
     case encodingError(Error)
-    case httpError(statusCode: Int, data: Data?)
+    case httpError(statusCode: Int, error: Any?)
     case unauthorized
     case serverError(String)
     case networkError(Error)
+    case mapping
     case unknown
     
     public var errorDescription: String? {
@@ -36,6 +37,8 @@ public enum NetworkError: Error, LocalizedError {
             return "Erro no servidor: \(message)"
         case .networkError(let error):
             return "Erro de rede: \(error.localizedDescription)"
+        case .mapping:
+            return "Erro ao decodificar resposta"
         case .unknown:
             return "Erro desconhecido"
         }

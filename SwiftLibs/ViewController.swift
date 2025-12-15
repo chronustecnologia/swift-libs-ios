@@ -77,7 +77,14 @@ class ViewController: UIViewController {
         
         //networkManagerWithRequest() { result in }
         
-        networkManagerWithRequestProtocol() { result in }
+        networkManagerWithRequestProtocol() { result in
+            switch result {
+            case .success(let response):
+                break
+            case .failure(let error):
+                break
+            }
+        }
         
         requestAuthorizationLocation(notificationResponse)
     }
@@ -86,7 +93,7 @@ class ViewController: UIViewController {
         notification.post(name: .loadingWindow, object: self, userInfo: ["response": "Novo título botão"])
     }
     
-    private func networkManagerWithRequestProtocol(completion: @escaping (Result<NetworkResponse<Retorno>, NetworkError>) -> Void) {
+    private func networkManagerWithRequestProtocol(completion: @escaping (Result<Retorno, NetworkError>) -> Void) {
         let request = DefaultRequest()
         NetworkManager.shared?.request(request, responseType: Retorno.self, completion: completion)
     }
@@ -100,7 +107,7 @@ class ViewController: UIViewController {
         NetworkManager.shared?.request(request, responseType: Retorno.self) { result in
             switch result {
             case .success(let response):
-                completion(.success(response.data))
+                completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
             }

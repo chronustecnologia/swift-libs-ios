@@ -11,7 +11,7 @@ public extension NetworkManager {
         _ requestObject: NetworkRequestProtocol,
         responseType: T.Type,
         decoder: JSONDecoder = JSONDecoder(),
-        completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) {
+        completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard continueWithoutMock(model: responseType, request: requestObject, customError: EmptyErrorModel.self, completion: completion) else { return }
         let networkRequest = requestObject.asNetworkRequest()
         self.request(networkRequest, responseType: responseType, decoder: decoder, completion: completion)
@@ -19,7 +19,7 @@ public extension NetworkManager {
     
     func request(
         _ requestObject: NetworkRequestProtocol,
-        completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
+        completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let networkRequest = requestObject.asNetworkRequest()
         self.request(networkRequest, completion: completion)
     }
@@ -39,13 +39,13 @@ public extension NetworkManager {
         _ requestObject: NetworkRequestProtocol,
         responseType: T.Type,
         decoder: JSONDecoder = JSONDecoder()
-    ) async throws -> NetworkResponse<T> {
+    ) async throws -> T {
         let networkRequest = requestObject.asNetworkRequest()
         return try await self.request(networkRequest, responseType: responseType, decoder: decoder)
     }
     
     @available(iOS 13.0.0, *)
-    func request(_ requestObject: NetworkRequestProtocol) async throws -> NetworkResponse<Data> {
+    func request(_ requestObject: NetworkRequestProtocol) async throws -> Data {
         let networkRequest = requestObject.asNetworkRequest()
         return try await self.request(networkRequest)
     }

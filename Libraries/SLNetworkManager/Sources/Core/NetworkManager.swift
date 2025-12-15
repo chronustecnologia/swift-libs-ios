@@ -68,20 +68,15 @@ public final class NetworkManager: NSObject {
     // MARK: - Public Methods
     
     /// Executa uma requisição e retorna dados decodificados
-    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder(), completion: @escaping (Result<T, NetworkError>) -> Void) {
         executeRequest(request) { [weak self] result in
             switch result {
             case .success(let response):
                 do {
-                    let decodedData = try decoder.decode(T.self, from: response.data)
-                    let networkResponse = NetworkResponse(
-                        data: decodedData,
-                        statusCode: response.statusCode,
-                        headers: response.headers
-                    )
-                    completion(.success(networkResponse))
+                    let decodedData = try decoder.decode(T.self, from: response)
+                    completion(.success(decodedData))
                 } catch {
-                    self?.logger?.log(response: nil, data: response.data, error: error)
+                    self?.logger?.log(response: nil, data: response, error: error)
                     completion(.failure(.decodingError(error)))
                 }
             case .failure(let error):
@@ -91,7 +86,7 @@ public final class NetworkManager: NSObject {
     }
     
     /// Executa uma requisição e retorna dados brutos
-    public func request(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
+    public func request(_ request: NetworkRequest, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         executeRequest(request, completion: completion)
     }
     
@@ -110,7 +105,7 @@ public final class NetworkManager: NSObject {
     // MARK: - Async/Await Support (iOS 13+)
     
     @available(iOS 13.0.0, *)
-    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder()) async throws -> NetworkResponse<T> {
+    public func request<T: Decodable>(_ request: NetworkRequest, responseType: T.Type, decoder: JSONDecoder = JSONDecoder()) async throws -> T {
         return try await withCheckedThrowingContinuation { continuation in
             self.request(request, responseType: responseType, decoder: decoder) { result in
                 continuation.resume(with: result)
@@ -119,7 +114,7 @@ public final class NetworkManager: NSObject {
     }
     
     @available(iOS 13.0.0, *)
-    public func request(_ request: NetworkRequest) async throws -> NetworkResponse<Data> {
+    public func request(_ request: NetworkRequest) async throws -> Data {
         return try await withCheckedThrowingContinuation { continuation in
             self.request(request) { result in
                 continuation.resume(with: result)
@@ -129,7 +124,7 @@ public final class NetworkManager: NSObject {
     
     // MARK: - Private Methods
     
-    private func executeRequest(_ request: NetworkRequest, completion: @escaping (Result<NetworkResponse<Data>, NetworkError>) -> Void) {
+    private func executeRequest(_ request: NetworkRequest, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let urlRequest: URLRequest
         
         do {
@@ -170,32 +165,32 @@ public final class NetworkManager: NSObject {
                     statusCode: httpResponse.statusCode,
                     headers: httpResponse.allHeaderFields
                 )
-                completion(.success(networkResponse))
+                completion(.success(data))
             case 401:
                 completion(.failure(.unauthorized))
             case 400...499:
-                completion(.failure(.httpError(statusCode: httpResponse.statusCode, data: data)))
+                completion(.failure(.httpError(statusCode: httpResponse.statusCode, error: data)))
             case 500...599:
                 let errorMessage = String(data: data, encoding: .utf8) ?? "Erro desconhecido"
                 completion(.failure(.serverError(errorMessage)))
             default:
-                completion(.failure(.httpError(statusCode: httpResponse.statusCode, data: data)))
+                completion(.failure(.httpError(statusCode: httpResponse.statusCode, error: data)))
             }
         }
         
         task.resume()
     }
     
-    func continueWithoutMock<T: Codable, E: Codable>(model: T.Type, request: NetworkRequestProtocol, customError: E.Type, completion: @escaping (Result<NetworkResponse<T>, NetworkError>) -> Void) -> Bool {
+    func continueWithoutMock<T: Codable, E: Codable>(model: T.Type, request: NetworkRequestProtocol, customError: E.Type, completion: @escaping (Result<T, NetworkError>) -> Void) -> Bool {
         guard debugMode,
               let response = checkExistantMock(request: request, model: model, customError: customError) else { return true }
-        //if response.httpStatus.isHTTPSuccess, let successResponse = response.results {
-        //    completion(.success(successResponse))
-        //} else if let errorResponse = response.errorResults {
-        //    completion(.failure(.customError(statusCode: response.httpStatus, result: errorResponse)))
-        //} else {
-        //    completion(.failure(.mappingError))
-        //}
+        if response.httpStatus.isHTTPSuccess, let successResponse = response.results {
+            completion(.success(successResponse))
+        } else if let errorResponse = response.errors {
+            completion(.failure(.httpError(statusCode: response.httpStatus, error: errorResponse)))
+        } else {
+            completion(.failure(.mapping))
+        }
         return false
     }
     

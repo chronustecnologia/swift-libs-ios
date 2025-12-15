@@ -9,7 +9,7 @@ import Foundation
 import SLNetworkManager
 
 final class MocksConfiguration: MockConfigurationProtocol {
-    var mocksPath: String { "/Users/jose.julio.ext/BancoDigital/mobile-ios--banco-digital/BancoDigital/Mocks/" }
+    var mocksPath: String { "/Users/jose.julio.ext/SwiftProjects/swift-libs-ios/SwiftLibs/Mocks/" }
     var mocksEnabled: Bool {
         var isEnabled: Bool = false
     #if DEBUG
