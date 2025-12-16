@@ -23,7 +23,7 @@ open class BaseNetworkRequest: NetworkRequestProtocol {
     }
     
     public var headers: [String: String]? {
-        return nil
+        ["user-agent": "app"]
     }
     
     public var contentType: ContentType {

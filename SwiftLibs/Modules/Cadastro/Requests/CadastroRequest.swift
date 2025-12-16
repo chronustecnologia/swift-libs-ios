@@ -9,9 +9,9 @@ import SLCommonExtensions
 import SLNetworkManager
 import SLNetworkManagerInterface
 
-final class CadastroRequest: NetworkRequestProtocol {
-    var endpoint: String { "/typicode/demo/profile" }
-    var method: HTTPMethod { .get }
+final class CadastroRequest: BaseNetworkRequest {
+    override var endpoint: String { "/typicode/demo/profile" }
+    override var method: HTTPMethod { .get }
     var body: [String: Any]? { request.toJSON() ?? [:] }
     
     var request: Cadastro.Model.Request
