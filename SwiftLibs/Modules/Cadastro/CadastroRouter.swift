@@ -8,7 +8,7 @@
 import UIKit
 
 @objc protocol CadastroRoutingLogic {
-    func routeToSomewhere()
+    func routeToContato()
 }
 
 protocol CadastroDataPassing {
@@ -24,16 +24,16 @@ final class CadastroRouter: NSObject, CadastroRoutingLogic, CadastroDataPassing 
     
     // MARK: - Routing Logic
     
-    func routeToSomewhere() {
-        //let nextController = NextViewController()
-        //var destinationDS = nextController.router?.dataStore
-        //passDataToSomewhere(source: dataStore, destination: &destinationDS)
-        //viewController?.navigationController?.pushViewController(nextViewController, animated: true)
+    func routeToContato() {
+        let nextController = ContatoViewController()
+        var destinationDS = nextController.router?.dataStore
+        passDataToContato(source: dataStore, destination: &destinationDS)
+        viewController?.navigationController?.pushViewController(nextController, animated: true)
     }
     
     // MARK: - Passing data
     
-    //func passDataToSomewhere(source: CadastroDataStore, destination: inout SomewhereDataStore) {
-        //destination.name = source.name
-    //}
+    func passDataToContato(source: CadastroDataStore?, destination: inout ContatoDataStore?) {
+        destination?.name = source?.name ?? ""
+    }
 }

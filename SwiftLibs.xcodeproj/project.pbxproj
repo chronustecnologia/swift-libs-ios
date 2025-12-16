@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,13 @@
 		DC2D5BFD2EF08E3C0056977D /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5BFC2EF08E380056977D /* CadastroView.swift */; };
 		DC2D5C012EF0903A0056977D /* CadastroKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C002EF0903A0056977D /* CadastroKeys.swift */; };
 		DC2D5C022EF0903A0056977D /* Cadastro.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2D5BFF2EF0903A0056977D /* Cadastro.strings */; };
+		DC2D5C042EF18D370056977D /* typicode_demo_profile.json in Resources */ = {isa = PBXBuildFile; fileRef = DC2D5C032EF18D370056977D /* typicode_demo_profile.json */; };
+		DC2D5C2E2EF194420056977D /* ContatoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C282EF194420056977D /* ContatoInteractor.swift */; };
+		DC2D5C2F2EF194420056977D /* ContatoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2B2EF194420056977D /* ContatoRouter.swift */; };
+		DC2D5C302EF194420056977D /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */; };
+		DC2D5C312EF194420056977D /* ContatoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2D2EF194420056977D /* ContatoWorker.swift */; };
+		DC2D5C322EF194420056977D /* ContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2C2EF194420056977D /* ContatoViewController.swift */; };
+		DC2D5C332EF194420056977D /* ContatoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C292EF194420056977D /* ContatoModels.swift */; };
 		DCDD63F52EE9C8790065D152 /* CadastroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F12EE9C8790065D152 /* CadastroPresenter.swift */; };
 		DCDD63F62EE9C8790065D152 /* CadastroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F22EE9C8790065D152 /* CadastroRouter.swift */; };
 		DCDD63F72EE9C8790065D152 /* CadastroWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F42EE9C8790065D152 /* CadastroWorker.swift */; };
@@ -28,6 +35,16 @@
 		DCDD64222EEA08640065D152 /* BaseNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */; };
 		DCDD64242EEA08A80065D152 /* DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD64232EEA08A50065D152 /* DefaultRequest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC2D5C0D2EF18E990056977D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0319C55479FE912E1706CD0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C09F42BFBE5439888ABCE11C;
+			remoteInfo = SwiftLibs;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12F4D104B6620C3BE98E729D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +58,14 @@
 		DC2D5BFC2EF08E380056977D /* CadastroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroView.swift; sourceTree = "<group>"; };
 		DC2D5BFF2EF0903A0056977D /* Cadastro.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Cadastro.strings; sourceTree = "<group>"; };
 		DC2D5C002EF0903A0056977D /* CadastroKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroKeys.swift; sourceTree = "<group>"; };
+		DC2D5C032EF18D370056977D /* typicode_demo_profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = typicode_demo_profile.json; sourceTree = "<group>"; };
+		DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLibsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2D5C282EF194420056977D /* ContatoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoInteractor.swift; sourceTree = "<group>"; };
+		DC2D5C292EF194420056977D /* ContatoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoModels.swift; sourceTree = "<group>"; };
+		DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoPresenter.swift; sourceTree = "<group>"; };
+		DC2D5C2B2EF194420056977D /* ContatoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRouter.swift; sourceTree = "<group>"; };
+		DC2D5C2C2EF194420056977D /* ContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewController.swift; sourceTree = "<group>"; };
+		DC2D5C2D2EF194420056977D /* ContatoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoWorker.swift; sourceTree = "<group>"; };
 		DCDD63EF2EE9C8790065D152 /* CadastroInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroInteractor.swift; sourceTree = "<group>"; };
 		DCDD63F02EE9C8790065D152 /* CadastroModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroModels.swift; sourceTree = "<group>"; };
 		DCDD63F12EE9C8790065D152 /* CadastroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresenter.swift; sourceTree = "<group>"; };
@@ -56,12 +81,23 @@
 		F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DC2D5C0A2EF18E990056977D /* SwiftLibsTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SwiftLibsTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		C0E76F8AB4D6FEB6636412CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				85A2CB3DB1E860E96EEBB6AB /* Pods_SwiftLibs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2D5C062EF18E990056977D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				31B654D8509FCACC0AAFD5FA /* SwiftLibs */,
+				DC2D5C0A2EF18E990056977D /* SwiftLibsTests */,
 				BEDDDF14EA0DA0C1C61BE74F /* Products */,
 				9D15B49C2BB599F40C4B79E4 /* Pods */,
 				5D3196A5ABFC672645FF2409 /* Frameworks */,
@@ -115,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */,
+				DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				DC2D5BFA2EF088020056977D /* MocksConfiguration.swift */,
+				DC2D5C032EF18D370056977D /* typicode_demo_profile.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -152,9 +191,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DC2D5C272EF194250056977D /* Contato */ = {
+			isa = PBXGroup;
+			children = (
+				DC2D5C282EF194420056977D /* ContatoInteractor.swift */,
+				DC2D5C292EF194420056977D /* ContatoModels.swift */,
+				DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */,
+				DC2D5C2B2EF194420056977D /* ContatoRouter.swift */,
+				DC2D5C2C2EF194420056977D /* ContatoViewController.swift */,
+				DC2D5C2D2EF194420056977D /* ContatoWorker.swift */,
+			);
+			path = Contato;
+			sourceTree = "<group>";
+		};
 		DCDD63ED2EE9C84D0065D152 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DC2D5C272EF194250056977D /* Contato */,
 				DCDD63EE2EE9C85C0065D152 /* Cadastro */,
 			);
 			path = Modules;
@@ -208,6 +261,29 @@
 			productReference = F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DC2D5C082EF18E990056977D /* SwiftLibsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC2D5C0F2EF18E990056977D /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */;
+			buildPhases = (
+				DC2D5C052EF18E990056977D /* Sources */,
+				DC2D5C062EF18E990056977D /* Frameworks */,
+				DC2D5C072EF18E990056977D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC2D5C0E2EF18E990056977D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC2D5C0A2EF18E990056977D /* SwiftLibsTests */,
+			);
+			name = SwiftLibsTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftLibsTests;
+			productReference = DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,7 +291,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DC2D5C082EF18E990056977D = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C09F42BFBE5439888ABCE11C;
+					};
+				};
 			};
 			buildConfigurationList = F7C3253E429D98DD366D11CF /* Build configuration list for PBXProject "SwiftLibs" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -231,6 +314,7 @@
 			projectRoot = "";
 			targets = (
 				C09F42BFBE5439888ABCE11C /* SwiftLibs */,
+				DC2D5C082EF18E990056977D /* SwiftLibsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +327,14 @@
 				24D154CECAAC0634E41D46CA /* Assets.xcassets in Resources */,
 				2CCCF3F7E58F25E55DEE21AE /* LaunchScreen.storyboard in Resources */,
 				DC2D5C022EF0903A0056977D /* Cadastro.strings in Resources */,
+				DC2D5C042EF18D370056977D /* typicode_demo_profile.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC2D5C072EF18E990056977D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,13 +400,34 @@
 				DC2D5C012EF0903A0056977D /* CadastroKeys.swift in Sources */,
 				DCDD64242EEA08A80065D152 /* DefaultRequest.swift in Sources */,
 				DC2D5BFB2EF088020056977D /* MocksConfiguration.swift in Sources */,
+				DC2D5C2E2EF194420056977D /* ContatoInteractor.swift in Sources */,
+				DC2D5C2F2EF194420056977D /* ContatoRouter.swift in Sources */,
+				DC2D5C302EF194420056977D /* ContatoPresenter.swift in Sources */,
+				DC2D5C312EF194420056977D /* ContatoWorker.swift in Sources */,
+				DC2D5C322EF194420056977D /* ContatoViewController.swift in Sources */,
+				DC2D5C332EF194420056977D /* ContatoModels.swift in Sources */,
 				D874CC15DDAD6CAB4588853C /* SceneDelegate.swift in Sources */,
 				B579835C0FC041C385DC4384 /* ViewController.swift in Sources */,
 				DCDD63FF2EE9EE250065D152 /* AppVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC2D5C052EF18E990056977D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC2D5C0E2EF18E990056977D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C09F42BFBE5439888ABCE11C /* SwiftLibs */;
+			targetProxy = DC2D5C0D2EF18E990056977D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		898C436F8EF1998D28848FFE /* LaunchScreen.storyboard */ = {
@@ -430,6 +543,60 @@
 			};
 			name = Debug;
 		};
+		DC2D5C102EF18E990056977D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22PMS2YTQ8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftLibs";
+			};
+			name = Debug;
+		};
+		DC2D5C112EF18E990056977D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22PMS2YTQ8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftLibs";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		E7AA34A6C3232B998C998D00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -495,6 +662,15 @@
 			buildConfigurations = (
 				A7FA660C71C293BEC24385F6 /* Debug */,
 				5C23B34F7F7C06C387C65472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DC2D5C0F2EF18E990056977D /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC2D5C102EF18E990056977D /* Debug */,
+				DC2D5C112EF18E990056977D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
