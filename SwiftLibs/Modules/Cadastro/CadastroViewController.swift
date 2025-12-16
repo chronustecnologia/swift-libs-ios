@@ -86,5 +86,6 @@ extension CadastroViewController: CadastroDisplayLogic {
     
     func displayError() {
         print ("Erro")
+        router?.routeToContato()
     }
 }

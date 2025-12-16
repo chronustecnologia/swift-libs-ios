@@ -39,14 +39,29 @@ class CadastroPresenterTests: XCTestCase {
     // MARK: - Tests
     
     func testDisplayScreenValuesCalled() {
+        // When
+        sut?.presentScreenValues()
         
+        // Then
+        XCTAssertTrue(spyController?.displayScreenValuesCalled ?? false)
     }
     
     func testDisplaySuccessCalled() {
+        // Given
+        let response = Cadastro.Model.Response(name: "José")
         
+        // When
+        sut?.presentSuccess(response: response)
+        
+        // Then
+        XCTAssertTrue(spyController?.displaySuccessCalled ?? false)
     }
     
     func testDisplayErrorCalled() {
+        // When
+        sut?.presentError()
         
+        // Then
+        XCTAssertTrue(spyController?.displayErrorCalled ?? false)
     }
 }

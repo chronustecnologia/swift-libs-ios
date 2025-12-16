@@ -41,25 +41,38 @@ class CadastroViewControllerTests: XCTestCase {
         sut = CadastroViewController()
         sut?.interactor = spyInteractor
         sut?.router = spyRouter
+        window?.makeKeyAndVisible()
     }
     
     func loadView() {
-        guard let sut = sut else { return }
-        window?.addSubview(sut.view)
+        guard let window = window, let sut = sut else { return }
+        window.addSubview(sut.view)
         RunLoop.current.run(until: Date())
     }
     
     // MARK: - Tests
     
     func testLoadScreenValuesCalled() {
+        // When
+        loadView()
         
+        // Then
+        XCTAssertTrue(spyInteractor?.loadScreenValuesCalled ?? false)
     }
     
     func testLoadCalled() {
+        // When
+        sut?.didTap()
         
+        // Then
+        XCTAssertTrue(spyInteractor?.loadCalled ?? false)
     }
     
     func testRouteToContatoCalled() {
+        // When
+        sut?.displayError()
         
+        // Then
+        XCTAssertTrue(spyRouter?.routeToContatoCalled ?? false)
     }
 }
