@@ -18,8 +18,8 @@ protocol CadastroDelegate: AnyObject {
 
 final class CadastroView: UIView {
     
-    private lazy var button: UIButton = {
-        let button = UIButton()
+    private lazy var button: SLButton = {
+        let button = SLButton()
         button.addTarget(self, action: #selector(didTapAction), for: .touchUpInside)
         return button
     }()

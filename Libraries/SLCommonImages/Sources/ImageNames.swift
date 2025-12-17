@@ -10,5 +10,7 @@ import Foundation
 public enum ImageNames {
     public enum Literal: String {
         case image
+        case close
+        case nextArrow
     }
 }
