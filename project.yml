@@ -37,3 +37,25 @@ targets:
       TARGETED_DEVICE_FAMILY: "1,2"
       VALIDATE_WORKSPACE: yes
       ENABLE_USER_SCRIPT_SANDBOXING: no
+    scheme:
+      testTargets:
+        - SwiftLibsTests
+      gatherCoverageData: false
+  SwiftLibsTests:
+    type: bundle.unit-test
+    platform: iOS
+    bundleId: com.chronustecnologia.SwiftLibsTests
+    dependencies:
+      - target: SwiftLibs
+    scheme:
+      gatherCoverageData: true    
+    sources:
+      - path: SwiftLibsTests
+    settings:
+      CODE_SIGN_STYLE: Automatic
+      PRODUCT_NAME: SwiftLibsTests
+      GENERATE_INFOPLIST_FILE: YES
+      TARGETED_DEVICE_FAMILY: "1,2"
+      VALIDATE_WORKSPACE: yes
+      ENABLE_USER_SCRIPT_SANDBOXING: no
+

@@ -3,49 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0938011303E12239199619E3 /* CadastroRoutingLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643FCB58D278CBC7D524D001 /* CadastroRoutingLogicSpy.swift */; };
+		107D7936E5E35E4CB6540F39 /* CadastroInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3C0504712BA3BB4E2C0A2B /* CadastroInteractor.swift */; };
+		11FEA41403CC8AB910B6A01D /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CDEE9694CD964793B671D /* CadastroView.swift */; };
+		162E32B61602922A77ACCA7E /* CadastroDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5DBD4A399549498A34A89A /* CadastroDisplayLogicSpy.swift */; };
+		1873D0CE026239E72DBA56C7 /* MocksConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDDE16D1CCA2978EB8C81E /* MocksConfiguration.swift */; };
 		24D154CECAAC0634E41D46CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496439050FEE8732544D5426 /* Assets.xcassets */; };
+		2899671B779104B4CF560EEF /* ContatoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA68243D543C8B3CFD99CD /* ContatoWorker.swift */; };
+		2BC37C8E0D7C1622317543E2 /* ContatoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374711D213EE1739D256B79 /* ContatoModels.swift */; };
 		2CCCF3F7E58F25E55DEE21AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 898C436F8EF1998D28848FFE /* LaunchScreen.storyboard */; };
+		32B8E0FE018C1F3D304325A0 /* CadastroPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BFA809D108686F4A081CB2 /* CadastroPresenterTests.swift */; };
+		3AF6601C7CDC7DBF1B32DAAA /* CadastroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783182F9EE5BFE6F148F6201 /* CadastroPresenter.swift */; };
+		4247207550C5FBF61DB80BD6 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD1B8CF0817750401D716A /* CadastroViewController.swift */; };
+		4336C82FBAC0C3CCE2806039 /* BaseNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29F0DC4F5D383F8CF7A66C /* BaseNetworkRequest.swift */; };
+		556D5C04F3435E54CDB02659 /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B0DD29440E1A464F7B86C /* GlobalImports.swift */; };
 		6D5D8881A034DA30DA8F6CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */; };
-		85A2CB3DB1E860E96EEBB6AB /* Pods_SwiftLibs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912722C9ED01EAD7D0C3B0DB /* Pods_SwiftLibs.framework */; };
+		79CE0D642C393DB311624D6B /* CadastroBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04ACF17180285920BFF33DE /* CadastroBusinessLogicSpy.swift */; };
+		7A06C228B4D446E78DDFD33D /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C3B887D6C451A12DBE783 /* AppVersion.swift */; };
+		7D8387C006C788D89F6AD4D5 /* ContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141BD5A727443B64A6897A96 /* ContatoViewController.swift */; };
+		7F36DDC948A3C923742BCB87 /* Cadastro.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33F0B94615C1D50824D0E660 /* Cadastro.strings */; };
+		825E13DA5D7E2D9156BA06E1 /* CadastroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C22387D2AB9CC339442C1B /* CadastroRouter.swift */; };
+		94CEF40869175A3730DBEDA9 /* CadastroPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600AACF6C1C0FCED7B907A3 /* CadastroPresentationLogicSpy.swift */; };
+		95070CB64F1EFC302C5A9B46 /* CadastroModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222FCC285181094B2B50F96 /* CadastroModels.swift */; };
+		A779586C1DCAC5C2598BCD54 /* typicode_demo_profile.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DE1A63128AF51F8383C496D /* typicode_demo_profile.json */; };
+		A8A7989147B7AAA15B939293 /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB7F485C57BE587369C8CA3 /* ContatoPresenter.swift */; };
+		A95AD71341AE8E9EF220053C /* CadastroWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F27C69BA8CF3BB65949A10 /* CadastroWorker.swift */; };
+		A97156B1F28EF7D236F6E0AE /* CadastroViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB09DD3DAFD3B2AEBB7AC6 /* CadastroViewControllerTests.swift */; };
+		AFDBEAD2FF6542443B89DA5C /* CadastroWorkerLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463517487E2BEBDDDADEDD66 /* CadastroWorkerLogicSpy.swift */; };
+		B1F19AECAB05A405897F3805 /* CadastroRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C1C6E78790850D57CB0D0D /* CadastroRequest.swift */; };
+		CBD7B3121E30093F29A461DB /* CadastroWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278398FC4CC7A2520B932502 /* CadastroWorkerTests.swift */; };
+		D4770B1AA81EA98FB56F143C /* CadastroInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1176DF45E4F744D1E14E9 /* CadastroInteractorTests.swift */; };
 		D874CC15DDAD6CAB4588853C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F4D104B6620C3BE98E729D /* SceneDelegate.swift */; };
-		DC2D5BF82EF07F8C0056977D /* CadastroRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5BF72EF07F870056977D /* CadastroRequest.swift */; };
-		DC2D5BFB2EF088020056977D /* MocksConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5BFA2EF088020056977D /* MocksConfiguration.swift */; };
-		DC2D5BFD2EF08E3C0056977D /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5BFC2EF08E380056977D /* CadastroView.swift */; };
-		DC2D5C012EF0903A0056977D /* CadastroKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C002EF0903A0056977D /* CadastroKeys.swift */; };
-		DC2D5C022EF0903A0056977D /* Cadastro.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC2D5BFF2EF0903A0056977D /* Cadastro.strings */; };
-		DC2D5C042EF18D370056977D /* typicode_demo_profile.json in Resources */ = {isa = PBXBuildFile; fileRef = DC2D5C032EF18D370056977D /* typicode_demo_profile.json */; };
-		DC2D5C2E2EF194420056977D /* ContatoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C282EF194420056977D /* ContatoInteractor.swift */; };
-		DC2D5C2F2EF194420056977D /* ContatoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2B2EF194420056977D /* ContatoRouter.swift */; };
-		DC2D5C302EF194420056977D /* ContatoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */; };
-		DC2D5C312EF194420056977D /* ContatoWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2D2EF194420056977D /* ContatoWorker.swift */; };
-		DC2D5C322EF194420056977D /* ContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C2C2EF194420056977D /* ContatoViewController.swift */; };
-		DC2D5C332EF194420056977D /* ContatoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C292EF194420056977D /* ContatoModels.swift */; };
-		DC2D5C582EF1A76D0056977D /* CadastroBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C4B2EF1A76D0056977D /* CadastroBusinessLogicSpy.swift */; };
-		DC2D5C592EF1A76D0056977D /* CadastroDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C4C2EF1A76D0056977D /* CadastroDisplayLogicSpy.swift */; };
-		DC2D5C5A2EF1A76D0056977D /* CadastroPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C4D2EF1A76D0056977D /* CadastroPresentationLogicSpy.swift */; };
-		DC2D5C5B2EF1A76D0056977D /* CadastroRoutingLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C4E2EF1A76D0056977D /* CadastroRoutingLogicSpy.swift */; };
-		DC2D5C5C2EF1A76D0056977D /* CadastroWorkerLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C4F2EF1A76D0056977D /* CadastroWorkerLogicSpy.swift */; };
-		DC2D5C5D2EF1A76D0056977D /* CadastroInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C512EF1A76D0056977D /* CadastroInteractorTests.swift */; };
-		DC2D5C5E2EF1A76D0056977D /* CadastroPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C522EF1A76D0056977D /* CadastroPresenterTests.swift */; };
-		DC2D5C5F2EF1A76D0056977D /* CadastroViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C532EF1A76D0056977D /* CadastroViewControllerTests.swift */; };
-		DC2D5C602EF1A76D0056977D /* CadastroWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C542EF1A76D0056977D /* CadastroWorkerTests.swift */; };
-		DC2D5C622EF1AB310056977D /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2D5C612EF1AB2D0056977D /* GlobalImports.swift */; };
-		DCDD63F52EE9C8790065D152 /* CadastroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F12EE9C8790065D152 /* CadastroPresenter.swift */; };
-		DCDD63F62EE9C8790065D152 /* CadastroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F22EE9C8790065D152 /* CadastroRouter.swift */; };
-		DCDD63F72EE9C8790065D152 /* CadastroWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F42EE9C8790065D152 /* CadastroWorker.swift */; };
-		DCDD63F82EE9C8790065D152 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F32EE9C8790065D152 /* CadastroViewController.swift */; };
-		DCDD63F92EE9C8790065D152 /* CadastroInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63EF2EE9C8790065D152 /* CadastroInteractor.swift */; };
-		DCDD63FA2EE9C8790065D152 /* CadastroModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63F02EE9C8790065D152 /* CadastroModels.swift */; };
-		DCDD63FF2EE9EE250065D152 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD63FE2EE9EE230065D152 /* AppVersion.swift */; };
-		DCDD64222EEA08640065D152 /* BaseNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */; };
+		E18D9EBD055010B095B2D9E5 /* CadastroKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0C7D03188492BFBBC6B00A /* CadastroKeys.swift */; };
+		E49D5CB52D3D3A7ACB11CAE0 /* ContatoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588D66B05A984ABAD5B6FE70 /* ContatoInteractor.swift */; };
+		E8B6E0DD48D4726C68511B7C /* Pods_SwiftLibs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D42B35EA599215B2FFEBAB5 /* Pods_SwiftLibs.framework */; };
+		E9B60F31BBBD0AD31DD91C68 /* ContatoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423F967257325A7A1575ED1 /* ContatoRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DC2D5C0D2EF18E990056977D /* PBXContainerItemProxy */ = {
+		05ACE2F727176CEC8D1B8770 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0319C55479FE912E1706CD0E /* Project object */;
 			proxyType = 1;
@@ -55,239 +55,233 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C1C6E78790850D57CB0D0D /* CadastroRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRequest.swift; sourceTree = "<group>"; };
+		05DD1B8CF0817750401D716A /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		0600AACF6C1C0FCED7B907A3 /* CadastroPresentationLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresentationLogicSpy.swift; sourceTree = "<group>"; };
+		0ED1176DF45E4F744D1E14E9 /* CadastroInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroInteractorTests.swift; sourceTree = "<group>"; };
+		1222FCC285181094B2B50F96 /* CadastroModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroModels.swift; sourceTree = "<group>"; };
 		12F4D104B6620C3BE98E729D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3072D10B663FAF7AA42565FF /* Pods-SwiftLibs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLibs.release.xcconfig"; path = "Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs.release.xcconfig"; sourceTree = "<group>"; };
+		141BD5A727443B64A6897A96 /* ContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewController.swift; sourceTree = "<group>"; };
+		1E10D68AB08C724A930F2E9B /* Pods-SwiftLibs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLibs.release.xcconfig"; path = "Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs.release.xcconfig"; sourceTree = "<group>"; };
+		278398FC4CC7A2520B932502 /* CadastroWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorkerTests.swift; sourceTree = "<group>"; };
+		33F0B94615C1D50824D0E660 /* Cadastro.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Cadastro.strings; sourceTree = "<group>"; };
+		381679B4366950D70ABF7975 /* SwiftLibsTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SwiftLibsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3650477B79CF74476962F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		463517487E2BEBDDDADEDD66 /* CadastroWorkerLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorkerLogicSpy.swift; sourceTree = "<group>"; };
+		48F27C69BA8CF3BB65949A10 /* CadastroWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorker.swift; sourceTree = "<group>"; };
 		496439050FEE8732544D5426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		912722C9ED01EAD7D0C3B0DB /* Pods_SwiftLibs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLibs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB4CE26586484B63E61216BF /* Pods-SwiftLibs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLibs.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs.debug.xcconfig"; sourceTree = "<group>"; };
-		DC2D5BF72EF07F870056977D /* CadastroRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRequest.swift; sourceTree = "<group>"; };
-		DC2D5BFA2EF088020056977D /* MocksConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksConfiguration.swift; sourceTree = "<group>"; };
-		DC2D5BFC2EF08E380056977D /* CadastroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroView.swift; sourceTree = "<group>"; };
-		DC2D5BFF2EF0903A0056977D /* Cadastro.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Cadastro.strings; sourceTree = "<group>"; };
-		DC2D5C002EF0903A0056977D /* CadastroKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroKeys.swift; sourceTree = "<group>"; };
-		DC2D5C032EF18D370056977D /* typicode_demo_profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = typicode_demo_profile.json; sourceTree = "<group>"; };
-		DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLibsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC2D5C282EF194420056977D /* ContatoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoInteractor.swift; sourceTree = "<group>"; };
-		DC2D5C292EF194420056977D /* ContatoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoModels.swift; sourceTree = "<group>"; };
-		DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoPresenter.swift; sourceTree = "<group>"; };
-		DC2D5C2B2EF194420056977D /* ContatoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRouter.swift; sourceTree = "<group>"; };
-		DC2D5C2C2EF194420056977D /* ContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoViewController.swift; sourceTree = "<group>"; };
-		DC2D5C2D2EF194420056977D /* ContatoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoWorker.swift; sourceTree = "<group>"; };
-		DC2D5C4B2EF1A76D0056977D /* CadastroBusinessLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroBusinessLogicSpy.swift; sourceTree = "<group>"; };
-		DC2D5C4C2EF1A76D0056977D /* CadastroDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroDisplayLogicSpy.swift; sourceTree = "<group>"; };
-		DC2D5C4D2EF1A76D0056977D /* CadastroPresentationLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresentationLogicSpy.swift; sourceTree = "<group>"; };
-		DC2D5C4E2EF1A76D0056977D /* CadastroRoutingLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRoutingLogicSpy.swift; sourceTree = "<group>"; };
-		DC2D5C4F2EF1A76D0056977D /* CadastroWorkerLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorkerLogicSpy.swift; sourceTree = "<group>"; };
-		DC2D5C512EF1A76D0056977D /* CadastroInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroInteractorTests.swift; sourceTree = "<group>"; };
-		DC2D5C522EF1A76D0056977D /* CadastroPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresenterTests.swift; sourceTree = "<group>"; };
-		DC2D5C532EF1A76D0056977D /* CadastroViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewControllerTests.swift; sourceTree = "<group>"; };
-		DC2D5C542EF1A76D0056977D /* CadastroWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorkerTests.swift; sourceTree = "<group>"; };
-		DC2D5C612EF1AB2D0056977D /* GlobalImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
-		DCDD63EF2EE9C8790065D152 /* CadastroInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroInteractor.swift; sourceTree = "<group>"; };
-		DCDD63F02EE9C8790065D152 /* CadastroModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroModels.swift; sourceTree = "<group>"; };
-		DCDD63F12EE9C8790065D152 /* CadastroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresenter.swift; sourceTree = "<group>"; };
-		DCDD63F22EE9C8790065D152 /* CadastroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRouter.swift; sourceTree = "<group>"; };
-		DCDD63F32EE9C8790065D152 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
-		DCDD63F42EE9C8790065D152 /* CadastroWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorker.swift; sourceTree = "<group>"; };
-		DCDD63FE2EE9EE230065D152 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
-		DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkRequest.swift; sourceTree = "<group>"; };
+		4DE1A63128AF51F8383C496D /* typicode_demo_profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = typicode_demo_profile.json; sourceTree = "<group>"; };
+		506162E3AB10383B29F18154 /* Pods-SwiftLibs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLibs.debug.xcconfig"; path = "Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs.debug.xcconfig"; sourceTree = "<group>"; };
+		51BFA809D108686F4A081CB2 /* CadastroPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresenterTests.swift; sourceTree = "<group>"; };
+		588D66B05A984ABAD5B6FE70 /* ContatoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoInteractor.swift; sourceTree = "<group>"; };
+		5EBA68243D543C8B3CFD99CD /* ContatoWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoWorker.swift; sourceTree = "<group>"; };
+		643FCB58D278CBC7D524D001 /* CadastroRoutingLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRoutingLogicSpy.swift; sourceTree = "<group>"; };
+		783182F9EE5BFE6F148F6201 /* CadastroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroPresenter.swift; sourceTree = "<group>"; };
+		7D3C0504712BA3BB4E2C0A2B /* CadastroInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroInteractor.swift; sourceTree = "<group>"; };
+		7FFDDE16D1CCA2978EB8C81E /* MocksConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksConfiguration.swift; sourceTree = "<group>"; };
+		8D29F0DC4F5D383F8CF7A66C /* BaseNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkRequest.swift; sourceTree = "<group>"; };
+		9D42B35EA599215B2FFEBAB5 /* Pods_SwiftLibs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLibs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A04ACF17180285920BFF33DE /* CadastroBusinessLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroBusinessLogicSpy.swift; sourceTree = "<group>"; };
+		A16C3B887D6C451A12DBE783 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		A374711D213EE1739D256B79 /* ContatoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoModels.swift; sourceTree = "<group>"; };
+		A86CDEE9694CD964793B671D /* CadastroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroView.swift; sourceTree = "<group>"; };
+		AF0C7D03188492BFBBC6B00A /* CadastroKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroKeys.swift; sourceTree = "<group>"; };
+		C423F967257325A7A1575ED1 /* ContatoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoRouter.swift; sourceTree = "<group>"; };
+		D3EB09DD3DAFD3B2AEBB7AC6 /* CadastroViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewControllerTests.swift; sourceTree = "<group>"; };
+		D5C22387D2AB9CC339442C1B /* CadastroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroRouter.swift; sourceTree = "<group>"; };
 		E3EF7BDE84965B095B888889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4B0DD29440E1A464F7B86C /* GlobalImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
+		EB5DBD4A399549498A34A89A /* CadastroDisplayLogicSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		EEB7F485C57BE587369C8CA3 /* ContatoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoPresenter.swift; sourceTree = "<group>"; };
+		F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SwiftLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0E76F8AB4D6FEB6636412CA /* Frameworks */ = {
+		32A682F4519DD14595077F88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85A2CB3DB1E860E96EEBB6AB /* Pods_SwiftLibs.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC2D5C062EF18E990056977D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E8B6E0DD48D4726C68511B7C /* Pods_SwiftLibs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023E20E1C6F0B393F468CD32 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5799D111CE6B2943E3DFB001 /* Cadastro */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		13D2DA549CDBEA426AE8CE0D /* SwiftLibsTests */ = {
+			isa = PBXGroup;
+			children = (
+				023E20E1C6F0B393F468CD32 /* Modules */,
+			);
+			path = SwiftLibsTests;
+			sourceTree = "<group>";
+		};
+		1B71AA4EC67F8C4E09819825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D42B35EA599215B2FFEBAB5 /* Pods_SwiftLibs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		31B654D8509FCACC0AAFD5FA /* SwiftLibs */ = {
 			isa = PBXGroup;
 			children = (
-				DC2D5BF92EF087EE0056977D /* Mocks */,
-				DCDD63FB2EE9EDC90065D152 /* Global */,
-				DCDD63ED2EE9C84D0065D152 /* Modules */,
 				F715AFF24FCD8FABC2980C5E /* AppDelegate.swift */,
 				496439050FEE8732544D5426 /* Assets.xcassets */,
 				E3EF7BDE84965B095B888889 /* Info.plist */,
 				898C436F8EF1998D28848FFE /* LaunchScreen.storyboard */,
 				12F4D104B6620C3BE98E729D /* SceneDelegate.swift */,
+				BBB1E9797A6E4B9CE2CE26E2 /* Global */,
+				34E816FE6936CA958E228C11 /* Mocks */,
+				4D38A839B6B9D6B2A69A3B9F /* Modules */,
 			);
 			path = SwiftLibs;
 			sourceTree = "<group>";
 		};
-		5D3196A5ABFC672645FF2409 /* Frameworks */ = {
+		34E816FE6936CA958E228C11 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				912722C9ED01EAD7D0C3B0DB /* Pods_SwiftLibs.framework */,
+				7FFDDE16D1CCA2978EB8C81E /* MocksConfiguration.swift */,
+				4DE1A63128AF51F8383C496D /* typicode_demo_profile.json */,
 			);
-			name = Frameworks;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		400491A139557611076D7AE6 /* Contato */ = {
+			isa = PBXGroup;
+			children = (
+				588D66B05A984ABAD5B6FE70 /* ContatoInteractor.swift */,
+				A374711D213EE1739D256B79 /* ContatoModels.swift */,
+				EEB7F485C57BE587369C8CA3 /* ContatoPresenter.swift */,
+				C423F967257325A7A1575ED1 /* ContatoRouter.swift */,
+				141BD5A727443B64A6897A96 /* ContatoViewController.swift */,
+				5EBA68243D543C8B3CFD99CD /* ContatoWorker.swift */,
+			);
+			path = Contato;
+			sourceTree = "<group>";
+		};
+		4313DBF2FBA0E7B355E2E907 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				01C1C6E78790850D57CB0D0D /* CadastroRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		4D38A839B6B9D6B2A69A3B9F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BCC7332CAC7EEB16E4C46E24 /* Cadastro */,
+				400491A139557611076D7AE6 /* Contato */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5799D111CE6B2943E3DFB001 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				0ED1176DF45E4F744D1E14E9 /* CadastroInteractorTests.swift */,
+				51BFA809D108686F4A081CB2 /* CadastroPresenterTests.swift */,
+				D3EB09DD3DAFD3B2AEBB7AC6 /* CadastroViewControllerTests.swift */,
+				278398FC4CC7A2520B932502 /* CadastroWorkerTests.swift */,
+				F98CC72E182DB542E0CD2EA8 /* Spies */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		5E9BB065E997776105DDC6F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A86CDEE9694CD964793B671D /* CadastroView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61ADA6D865979881B06F9AFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				506162E3AB10383B29F18154 /* Pods-SwiftLibs.debug.xcconfig */,
+				1E10D68AB08C724A930F2E9B /* Pods-SwiftLibs.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		943A5D5F837DF6179827C3B8 = {
 			isa = PBXGroup;
 			children = (
 				31B654D8509FCACC0AAFD5FA /* SwiftLibs */,
-				DC2D5C572EF1A76D0056977D /* SwiftLibsTests */,
+				13D2DA549CDBEA426AE8CE0D /* SwiftLibsTests */,
 				BEDDDF14EA0DA0C1C61BE74F /* Products */,
-				9D15B49C2BB599F40C4B79E4 /* Pods */,
-				5D3196A5ABFC672645FF2409 /* Frameworks */,
+				61ADA6D865979881B06F9AFC /* Pods */,
+				1B71AA4EC67F8C4E09819825 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9D15B49C2BB599F40C4B79E4 /* Pods */ = {
+		B49EA8E24EDE34414422FBEB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AB4CE26586484B63E61216BF /* Pods-SwiftLibs.debug.xcconfig */,
-				3072D10B663FAF7AA42565FF /* Pods-SwiftLibs.release.xcconfig */,
+				33F0B94615C1D50824D0E660 /* Cadastro.strings */,
+				AF0C7D03188492BFBBC6B00A /* CadastroKeys.swift */,
 			);
-			path = Pods;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBB1E9797A6E4B9CE2CE26E2 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				A16C3B887D6C451A12DBE783 /* AppVersion.swift */,
+				8D29F0DC4F5D383F8CF7A66C /* BaseNetworkRequest.swift */,
+				EB4B0DD29440E1A464F7B86C /* GlobalImports.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		BCC7332CAC7EEB16E4C46E24 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				7D3C0504712BA3BB4E2C0A2B /* CadastroInteractor.swift */,
+				1222FCC285181094B2B50F96 /* CadastroModels.swift */,
+				783182F9EE5BFE6F148F6201 /* CadastroPresenter.swift */,
+				D5C22387D2AB9CC339442C1B /* CadastroRouter.swift */,
+				05DD1B8CF0817750401D716A /* CadastroViewController.swift */,
+				48F27C69BA8CF3BB65949A10 /* CadastroWorker.swift */,
+				4313DBF2FBA0E7B355E2E907 /* Requests */,
+				B49EA8E24EDE34414422FBEB /* Resources */,
+				5E9BB065E997776105DDC6F4 /* Views */,
+			);
+			path = Cadastro;
 			sourceTree = "<group>";
 		};
 		BEDDDF14EA0DA0C1C61BE74F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */,
-				DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */,
+				381679B4366950D70ABF7975 /* SwiftLibsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC2D5BF52EF07EEE0056977D /* Requests */ = {
+		F98CC72E182DB542E0CD2EA8 /* Spies */ = {
 			isa = PBXGroup;
 			children = (
-				DC2D5BF72EF07F870056977D /* CadastroRequest.swift */,
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		DC2D5BF62EF07F7C0056977D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5BFC2EF08E380056977D /* CadastroView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DC2D5BF92EF087EE0056977D /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5BFA2EF088020056977D /* MocksConfiguration.swift */,
-				DC2D5C032EF18D370056977D /* typicode_demo_profile.json */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		DC2D5BFE2EF090210056977D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5BFF2EF0903A0056977D /* Cadastro.strings */,
-				DC2D5C002EF0903A0056977D /* CadastroKeys.swift */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		DC2D5C272EF194250056977D /* Contato */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C282EF194420056977D /* ContatoInteractor.swift */,
-				DC2D5C292EF194420056977D /* ContatoModels.swift */,
-				DC2D5C2A2EF194420056977D /* ContatoPresenter.swift */,
-				DC2D5C2B2EF194420056977D /* ContatoRouter.swift */,
-				DC2D5C2C2EF194420056977D /* ContatoViewController.swift */,
-				DC2D5C2D2EF194420056977D /* ContatoWorker.swift */,
-			);
-			path = Contato;
-			sourceTree = "<group>";
-		};
-		DC2D5C502EF1A76D0056977D /* Spies */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C4B2EF1A76D0056977D /* CadastroBusinessLogicSpy.swift */,
-				DC2D5C4C2EF1A76D0056977D /* CadastroDisplayLogicSpy.swift */,
-				DC2D5C4D2EF1A76D0056977D /* CadastroPresentationLogicSpy.swift */,
-				DC2D5C4E2EF1A76D0056977D /* CadastroRoutingLogicSpy.swift */,
-				DC2D5C4F2EF1A76D0056977D /* CadastroWorkerLogicSpy.swift */,
+				A04ACF17180285920BFF33DE /* CadastroBusinessLogicSpy.swift */,
+				EB5DBD4A399549498A34A89A /* CadastroDisplayLogicSpy.swift */,
+				0600AACF6C1C0FCED7B907A3 /* CadastroPresentationLogicSpy.swift */,
+				643FCB58D278CBC7D524D001 /* CadastroRoutingLogicSpy.swift */,
+				463517487E2BEBDDDADEDD66 /* CadastroWorkerLogicSpy.swift */,
 			);
 			path = Spies;
-			sourceTree = "<group>";
-		};
-		DC2D5C552EF1A76D0056977D /* Cadastro */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C502EF1A76D0056977D /* Spies */,
-				DC2D5C512EF1A76D0056977D /* CadastroInteractorTests.swift */,
-				DC2D5C522EF1A76D0056977D /* CadastroPresenterTests.swift */,
-				DC2D5C532EF1A76D0056977D /* CadastroViewControllerTests.swift */,
-				DC2D5C542EF1A76D0056977D /* CadastroWorkerTests.swift */,
-			);
-			path = Cadastro;
-			sourceTree = "<group>";
-		};
-		DC2D5C562EF1A76D0056977D /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C552EF1A76D0056977D /* Cadastro */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		DC2D5C572EF1A76D0056977D /* SwiftLibsTests */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C562EF1A76D0056977D /* Modules */,
-			);
-			path = SwiftLibsTests;
-			sourceTree = "<group>";
-		};
-		DCDD63ED2EE9C84D0065D152 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C272EF194250056977D /* Contato */,
-				DCDD63EE2EE9C85C0065D152 /* Cadastro */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		DCDD63EE2EE9C85C0065D152 /* Cadastro */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5BFE2EF090210056977D /* Resources */,
-				DC2D5BF62EF07F7C0056977D /* Views */,
-				DC2D5BF52EF07EEE0056977D /* Requests */,
-				DCDD63EF2EE9C8790065D152 /* CadastroInteractor.swift */,
-				DCDD63F02EE9C8790065D152 /* CadastroModels.swift */,
-				DCDD63F12EE9C8790065D152 /* CadastroPresenter.swift */,
-				DCDD63F22EE9C8790065D152 /* CadastroRouter.swift */,
-				DCDD63F32EE9C8790065D152 /* CadastroViewController.swift */,
-				DCDD63F42EE9C8790065D152 /* CadastroWorker.swift */,
-			);
-			path = Cadastro;
-			sourceTree = "<group>";
-		};
-		DCDD63FB2EE9EDC90065D152 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				DC2D5C612EF1AB2D0056977D /* GlobalImports.swift */,
-				DCDD64212EEA085F0065D152 /* BaseNetworkRequest.swift */,
-				DCDD63FE2EE9EE230065D152 /* AppVersion.swift */,
-			);
-			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,11 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7481AF393BEFC5EB93D4515C /* Build configuration list for PBXNativeTarget "SwiftLibs" */;
 			buildPhases = (
-				229C385A39DDA69A275B3E9E /* [CP] Check Pods Manifest.lock */,
+				9FC697C83E5234D70650F72C /* [CP] Check Pods Manifest.lock */,
 				85066A67E5391FEB35D40BDF /* Sources */,
 				A44A97DC4B7DC6525302F072 /* Resources */,
-				C0E76F8AB4D6FEB6636412CA /* Frameworks */,
-				B5420628F1728DFA5A680D44 /* [CP] Embed Pods Frameworks */,
+				32A682F4519DD14595077F88 /* Frameworks */,
+				6D9A92622728D8AAA6C9449F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,24 +306,20 @@
 			productReference = F48ACD9FCE64DD2A8C6AF25E /* SwiftLibs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC2D5C082EF18E990056977D /* SwiftLibsTests */ = {
+		D6F5A2782C315CE105DEA6E4 /* SwiftLibsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC2D5C0F2EF18E990056977D /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */;
+			buildConfigurationList = E004329E58430FCF776DB8C0 /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */;
 			buildPhases = (
-				DC2D5C052EF18E990056977D /* Sources */,
-				DC2D5C062EF18E990056977D /* Frameworks */,
-				DC2D5C072EF18E990056977D /* Resources */,
+				A552FBAF773666D581CF9074 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DC2D5C0E2EF18E990056977D /* PBXTargetDependency */,
+				67F2D521D2A46B88418CCE4E /* PBXTargetDependency */,
 			);
 			name = SwiftLibsTests;
-			packageProductDependencies = (
-			);
 			productName = SwiftLibsTests;
-			productReference = DC2D5C092EF18E990056977D /* SwiftLibsTests.xctest */;
+			productReference = 381679B4366950D70ABF7975 /* SwiftLibsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -339,12 +329,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					DC2D5C082EF18E990056977D = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = C09F42BFBE5439888ABCE11C;
+					D6F5A2782C315CE105DEA6E4 = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -362,7 +350,7 @@
 			projectRoot = "";
 			targets = (
 				C09F42BFBE5439888ABCE11C /* SwiftLibs */,
-				DC2D5C082EF18E990056977D /* SwiftLibsTests */,
+				D6F5A2782C315CE105DEA6E4 /* SwiftLibsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,23 +361,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D154CECAAC0634E41D46CA /* Assets.xcassets in Resources */,
+				7F36DDC948A3C923742BCB87 /* Cadastro.strings in Resources */,
 				2CCCF3F7E58F25E55DEE21AE /* LaunchScreen.storyboard in Resources */,
-				DC2D5C022EF0903A0056977D /* Cadastro.strings in Resources */,
-				DC2D5C042EF18D370056977D /* typicode_demo_profile.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DC2D5C072EF18E990056977D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A779586C1DCAC5C2598BCD54 /* typicode_demo_profile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		229C385A39DDA69A275B3E9E /* [CP] Check Pods Manifest.lock */ = {
+		6D9A92622728D8AAA6C9449F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC697C83E5234D70650F72C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,23 +409,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B5420628F1728DFA5A680D44 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftLibs/Pods-SwiftLibs-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,53 +416,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2D5BF82EF07F8C0056977D /* CadastroRequest.swift in Sources */,
-				DCDD63F52EE9C8790065D152 /* CadastroPresenter.swift in Sources */,
-				DC2D5BFD2EF08E3C0056977D /* CadastroView.swift in Sources */,
-				DCDD64222EEA08640065D152 /* BaseNetworkRequest.swift in Sources */,
-				DCDD63F62EE9C8790065D152 /* CadastroRouter.swift in Sources */,
-				DCDD63F72EE9C8790065D152 /* CadastroWorker.swift in Sources */,
-				DCDD63F82EE9C8790065D152 /* CadastroViewController.swift in Sources */,
-				DCDD63F92EE9C8790065D152 /* CadastroInteractor.swift in Sources */,
-				DCDD63FA2EE9C8790065D152 /* CadastroModels.swift in Sources */,
 				6D5D8881A034DA30DA8F6CE8 /* AppDelegate.swift in Sources */,
-				DC2D5C012EF0903A0056977D /* CadastroKeys.swift in Sources */,
-				DC2D5BFB2EF088020056977D /* MocksConfiguration.swift in Sources */,
-				DC2D5C2E2EF194420056977D /* ContatoInteractor.swift in Sources */,
-				DC2D5C2F2EF194420056977D /* ContatoRouter.swift in Sources */,
-				DC2D5C302EF194420056977D /* ContatoPresenter.swift in Sources */,
-				DC2D5C312EF194420056977D /* ContatoWorker.swift in Sources */,
-				DC2D5C322EF194420056977D /* ContatoViewController.swift in Sources */,
-				DC2D5C332EF194420056977D /* ContatoModels.swift in Sources */,
+				7A06C228B4D446E78DDFD33D /* AppVersion.swift in Sources */,
+				4336C82FBAC0C3CCE2806039 /* BaseNetworkRequest.swift in Sources */,
+				107D7936E5E35E4CB6540F39 /* CadastroInteractor.swift in Sources */,
+				E18D9EBD055010B095B2D9E5 /* CadastroKeys.swift in Sources */,
+				95070CB64F1EFC302C5A9B46 /* CadastroModels.swift in Sources */,
+				3AF6601C7CDC7DBF1B32DAAA /* CadastroPresenter.swift in Sources */,
+				B1F19AECAB05A405897F3805 /* CadastroRequest.swift in Sources */,
+				825E13DA5D7E2D9156BA06E1 /* CadastroRouter.swift in Sources */,
+				11FEA41403CC8AB910B6A01D /* CadastroView.swift in Sources */,
+				4247207550C5FBF61DB80BD6 /* CadastroViewController.swift in Sources */,
+				A95AD71341AE8E9EF220053C /* CadastroWorker.swift in Sources */,
+				E49D5CB52D3D3A7ACB11CAE0 /* ContatoInteractor.swift in Sources */,
+				2BC37C8E0D7C1622317543E2 /* ContatoModels.swift in Sources */,
+				A8A7989147B7AAA15B939293 /* ContatoPresenter.swift in Sources */,
+				E9B60F31BBBD0AD31DD91C68 /* ContatoRouter.swift in Sources */,
+				7D8387C006C788D89F6AD4D5 /* ContatoViewController.swift in Sources */,
+				2899671B779104B4CF560EEF /* ContatoWorker.swift in Sources */,
+				556D5C04F3435E54CDB02659 /* GlobalImports.swift in Sources */,
+				1873D0CE026239E72DBA56C7 /* MocksConfiguration.swift in Sources */,
 				D874CC15DDAD6CAB4588853C /* SceneDelegate.swift in Sources */,
-				DC2D5C622EF1AB310056977D /* GlobalImports.swift in Sources */,
-				DCDD63FF2EE9EE250065D152 /* AppVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC2D5C052EF18E990056977D /* Sources */ = {
+		A552FBAF773666D581CF9074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC2D5C582EF1A76D0056977D /* CadastroBusinessLogicSpy.swift in Sources */,
-				DC2D5C592EF1A76D0056977D /* CadastroDisplayLogicSpy.swift in Sources */,
-				DC2D5C5A2EF1A76D0056977D /* CadastroPresentationLogicSpy.swift in Sources */,
-				DC2D5C5B2EF1A76D0056977D /* CadastroRoutingLogicSpy.swift in Sources */,
-				DC2D5C5C2EF1A76D0056977D /* CadastroWorkerLogicSpy.swift in Sources */,
-				DC2D5C5D2EF1A76D0056977D /* CadastroInteractorTests.swift in Sources */,
-				DC2D5C5E2EF1A76D0056977D /* CadastroPresenterTests.swift in Sources */,
-				DC2D5C5F2EF1A76D0056977D /* CadastroViewControllerTests.swift in Sources */,
-				DC2D5C602EF1A76D0056977D /* CadastroWorkerTests.swift in Sources */,
+				79CE0D642C393DB311624D6B /* CadastroBusinessLogicSpy.swift in Sources */,
+				162E32B61602922A77ACCA7E /* CadastroDisplayLogicSpy.swift in Sources */,
+				D4770B1AA81EA98FB56F143C /* CadastroInteractorTests.swift in Sources */,
+				94CEF40869175A3730DBEDA9 /* CadastroPresentationLogicSpy.swift in Sources */,
+				32B8E0FE018C1F3D304325A0 /* CadastroPresenterTests.swift in Sources */,
+				0938011303E12239199619E3 /* CadastroRoutingLogicSpy.swift in Sources */,
+				A97156B1F28EF7D236F6E0AE /* CadastroViewControllerTests.swift in Sources */,
+				AFDBEAD2FF6542443B89DA5C /* CadastroWorkerLogicSpy.swift in Sources */,
+				CBD7B3121E30093F29A461DB /* CadastroWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DC2D5C0E2EF18E990056977D /* PBXTargetDependency */ = {
+		67F2D521D2A46B88418CCE4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C09F42BFBE5439888ABCE11C /* SwiftLibs */;
-			targetProxy = DC2D5C0D2EF18E990056977D /* PBXContainerItemProxy */;
+			targetProxy = 05ACE2F727176CEC8D1B8770 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,13 +478,33 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		430947ABF6157BF58B83787C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
+				PRODUCT_NAME = SwiftLibsTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/SwiftLibs";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Debug;
+		};
 		5C23B34F7F7C06C387C65472 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3072D10B663FAF7AA42565FF /* Pods-SwiftLibs.release.xcconfig */;
+			baseConfigurationReference = 1E10D68AB08C724A930F2E9B /* Pods-SwiftLibs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 22PMS2YTQ8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = SwiftLibs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -517,13 +518,33 @@
 			};
 			name = Release;
 		};
+		5FF35E4916A43728394C09BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
+				PRODUCT_NAME = SwiftLibsTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/SwiftLibs";
+				VALIDATE_WORKSPACE = YES;
+			};
+			name = Release;
+		};
 		A7FA660C71C293BEC24385F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB4CE26586484B63E61216BF /* Pods-SwiftLibs.debug.xcconfig */;
+			baseConfigurationReference = 506162E3AB10383B29F18154 /* Pods-SwiftLibs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 22PMS2YTQ8;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = SwiftLibs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,60 +622,6 @@
 			};
 			name = Debug;
 		};
-		DC2D5C102EF18E990056977D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 22PMS2YTQ8;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftLibs";
-			};
-			name = Debug;
-		};
-		DC2D5C112EF18E990056977D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 22PMS2YTQ8;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chronustecnologia.SwiftLibsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLibs.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftLibs";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		E7AA34A6C3232B998C998D00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -724,11 +691,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DC2D5C0F2EF18E990056977D /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */ = {
+		E004329E58430FCF776DB8C0 /* Build configuration list for PBXNativeTarget "SwiftLibsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC2D5C102EF18E990056977D /* Debug */,
-				DC2D5C112EF18E990056977D /* Release */,
+				430947ABF6157BF58B83787C /* Debug */,
+				5FF35E4916A43728394C09BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
